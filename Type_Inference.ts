@@ -1,14 +1,24 @@
-interface Rectangle {
-  height: number,
-  width: number
-}
+// Type Inference
 
-interface ColoredRectangle extends Rectangle {
-  color: string
+function add(a:number, b:number){
+    return a+b;
 }
+console.log(add(4,6));
 
-const coloredRectangle: ColoredRectangle = {
-  height: 20,
-  width: 10,
-  color: "red"
+let m: number | boolean | string
+m=12;
+m= true;
+m="appaso"
+console.log(m);
+
+//Array inference
+let colors = ["red", "green", "blue"]; 
+colors.push("yellow");
+console.log(colors);
+
+//object inference
+let user = {
+  id: 1,
+  username: "john_doe"
 };
+console.log(user.username.toUpperCase());
